@@ -43,7 +43,7 @@ Route::get('/students' , [StudentController::class, 'index']);
 Route::post('/students', [StudentController::class, 'store']);
 
 # method put
-Route::put('/mahasiswas/{id}', [MahasiswaController::class, 'update']);
+Route::put('/students', [StudentController::class, 'update']);
 
 # method delete
-Route::delete('/mahasiswas/{id}', [MahasiswaController::class, 'delete']);
+Route::delete('/students', [StudentController::class, 'delete']);

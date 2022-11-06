@@ -42,7 +42,7 @@ class StudentController extends Controller
         return response()->json($data, 201);
     }
     public function update(Request $request, $id){
-        $student1 = Mahasiswa::find ($id);
+        $student1 = Student::find ($id);
         $student1->update([
             'nama' => $request->nama,
             'nim' => $request->nim,
@@ -57,7 +57,7 @@ class StudentController extends Controller
         return response()->json($data, 200);
     }
     public function delete($id){
-        $student2 = Mahasiswa::destroy($id);
+        $student2 = Student::destroy($id);
         $data = [
             'message' => 'Data Berhasil dihapus' .$id,
             'jumlah data yang terhapus' =>$student2
